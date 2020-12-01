@@ -10,7 +10,6 @@
 #include "freertos/semphr.h"
 #include "driver/gpio.h"
 #include "sdkconfig.h"
-#include "statusCodes.h"
 #include "driver/i2c.h"
 #include "patterns.h"
 
@@ -62,8 +61,6 @@ struct displayData
 struct displayData d;
 
 SemaphoreHandle_t xMutex;
-
-struct StatusCode *currentStatus = &statusStartup;
 
 /**
  * @brief i2c master initialization
